@@ -2,7 +2,7 @@
   <v-card class="mx-auto">
     <v-list-item>
       <v-list-item-avatar size="56">
-        <v-img :src="contact.image"></v-img>
+        <v-img src="https://cdn.vuetifyjs.com/images/lists/ali.png"></v-img>
       </v-list-item-avatar>
 
       <v-list-item-content class="ml-4">
@@ -40,6 +40,8 @@
 </template>
 
 <script>
+import { mapGetters } from 'vuex';
+
 export default {
   name: 'ContactCard',
   props: {
@@ -53,11 +55,19 @@ export default {
       this.$emit('onEdit', contact);
     },
     onDelete(contact) {
+      if (!this.user.loggedIn) {
+        this.$router.push({ name: 'login' });
+      }
       this.$emit('onDelete', contact);
     },
     onDetail(contact) {
       this.$emit('onDetail', contact);
     },
+  },
+  computed: {
+    ...mapGetters({
+      user: 'user',
+    }),
   },
 };
 </script>

@@ -1,5 +1,9 @@
 <template>
   <v-col offset-xs="1" xs="10" offset-sm="1" sm="10" offset-md="3" md="6" offset-lg="4" lg="4">
+    <v-btn class="my-4" color="purple" dark block @click="$router.push({name: 'contactList'})">
+      <v-icon class="mr-4" right dark>mdi-arrow-left-circle</v-icon>
+      back
+    </v-btn>
     <v-form class="mt-4" ref="form" v-model="valid" lazy-validation>
       <v-text-field
         color="purple"

@@ -16,7 +16,7 @@
             Do you want to delete this record?
           </v-card-title>
           <v-divider class="purple mx-4"></v-divider>
-          <!-- <v-card-text>Let Google help apps determine location. This means sending anonymous location data to Google, even when no apps are running.</v-card-text> -->
+
           <v-card-actions class="py-4">
             <v-spacer></v-spacer>
             <v-btn color="purple" dark @click="remove()">

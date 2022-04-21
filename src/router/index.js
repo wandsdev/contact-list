@@ -11,14 +11,6 @@ const routes = [
     redirect: '/conatc-list',
   },
   {
-    path: '/test-auth',
-    name: 'testAuth',
-    component: () => import('../views/TestAuth.vue'),
-    meta: {
-      auth: true,
-    },
-  },
-  {
     path: '/conatc-list',
     name: 'contactList',
     component: () => import('../views/ContactList.vue'),
@@ -27,16 +19,25 @@ const routes = [
     path: '/conatc/add',
     name: 'contactAdd',
     component: () => import('../views/ContactForm.vue'),
+    meta: {
+      auth: true,
+    },
   },
   {
     path: '/conatc/edit',
     name: 'contactEdit',
     component: () => import('../views/ContactForm.vue'),
+    meta: {
+      auth: true,
+    },
   },
   {
     path: '/conatc/detail',
     name: 'contactDetail',
     component: () => import('../views/ContactDetail.vue'),
+    meta: {
+      auth: true,
+    },
   },
   {
     path: '/login',
