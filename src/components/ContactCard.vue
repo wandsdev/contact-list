@@ -25,13 +25,13 @@
     <v-card-actions>
       <v-list-item>
         <v-spacer></v-spacer>
-        <v-btn class="mb-0" color="purple" dark fab small>
+        <v-btn @click="onEdit(contact)" class="mb-0" color="purple" dark fab small>
           <v-icon>mdi-pencil</v-icon>
         </v-btn>
-        <v-btn class="ml-5" color="purple" dark fab small>
+        <v-btn @click="onDelete(contact)" class="ml-5" color="purple" dark fab small>
           <v-icon>mdi-delete</v-icon>
         </v-btn>
-        <v-btn class="ml-5" color="purple" dark fab small>
+        <v-btn @click="onDetail(contact)" class="ml-5" color="purple" dark fab small>
           <v-icon>mdi-card-account-details</v-icon>
         </v-btn>
       </v-list-item>
@@ -46,6 +46,17 @@ export default {
     contact: {
       type: Object,
       required: true,
+    },
+  },
+  methods: {
+    onEdit(contact) {
+      this.$emit('onEdit', contact);
+    },
+    onDelete(contact) {
+      this.$emit('onDelete', contact);
+    },
+    onDetail(contact) {
+      this.$emit('onDetail', contact);
     },
   },
 };
