@@ -64,7 +64,6 @@ export default {
         const routeIndexPage = 'contactList';
         await signOut(auth);
         this.$router.replace('/');
-        debugger;
         if (this.$route.name === routeIndexPage) {
           window.location.reload();
         } else {
