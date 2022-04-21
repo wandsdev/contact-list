@@ -11,7 +11,7 @@ const routes = [
     redirect: '/conatc-list',
   },
   {
-    path: '/conatc-list',
+    path: '/contatc-list',
     name: 'contactList',
     component: () => import('../views/ContactList.vue'),
   },
