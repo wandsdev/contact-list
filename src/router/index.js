@@ -8,7 +8,7 @@ Vue.use(VueRouter);
 const routes = [
   {
     path: '/',
-    redirect: '/conatc-list',
+    redirect: '/contatc-list',
   },
   {
     path: '/contatc-list',
