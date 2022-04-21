@@ -8,10 +8,10 @@ Vue.use(VueRouter);
 const routes = [
   {
     path: '/',
-    redirect: '/contatc-list',
+    redirect: '/contact-list',
   },
   {
-    path: '/contatc-list',
+    path: '/contact-list',
     name: 'contactList',
     component: () => import('../views/ContactList.vue'),
   },
